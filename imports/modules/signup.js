@@ -11,6 +11,7 @@ const getUserData = () => ({
         name: {
             first: document.querySelector('[name="firstName"]').value,
             last: document.querySelector('[name="lastName"]').value,
+            dob: document.querySelector('[name="dateOfBirth"]').value
         },
     },
 });
@@ -45,6 +46,9 @@ const validate = () => {
                 required: true,
                 minlength: 6,
             },
+            dob:{
+                required: true
+            }
         },
         messages: {
             firstName: {
@@ -61,6 +65,9 @@ const validate = () => {
                 required: 'Need a password here.',
                 minlength: 'Use at least six characters, please.',
             },
+            dob:{
+                required: 'We would like to know you how old you are.'
+            }
         },
         submitHandler() { signup(); },
     });

@@ -11,10 +11,10 @@ const AppNavigation = ({authenticated}) => (
   <nav>
       <div className="nav-wrapper navbar">
           <Link to="/" className="brand-logo">Discover U Write</Link>
+          <ul className="right hide-on-med-and-down">
+              <li>{renderNavigation(authenticated)}</li>
+          </ul>
       </div>
-      <ul className="right hide-on-med-and-down">
-          <li>{renderNavigation(authenticated)}</li>
-      </ul>
   </nav>
 );
 
